@@ -1,0 +1,226 @@
+//
+//  PrefixHeader.pch
+//  KuRuiBao
+//
+//  Created by x on 16/6/22.
+//  Copyright © 2016年 ChexXiaoMi. All rights reserved.
+//
+
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+//-- 添加这个宏之后mas_equalTo和equalTo就没有区别了 这个宏一定要添加在导入头文件之前才会有效果
+#define MAS_SHORTHAND_GLOBALS
+
+//-- 添加这个宏之后mas_width也可以写成width  width是make对象的一个属性，用来添加宽度的约束，mas_width是一个属性值，用来做equalTo的参数
+#define MAS_SHORTHAND
+
+
+#ifdef __OBJC__
+//-- 导入文件
+#import "Masonry.h"
+#import "MBProgressHUD+NJ.h"
+#import "UIView+Extension.h"
+#import "SpeechSynthesizer.h"
+#import "XMUser.h"
+#import "UIImage+JW.h"
+
+#import "XMCheckManager.h"
+
+#import "UMMobClick/MobClick.h"
+
+#pragma mark 第三方SDK配置信息
+
+//-- 初始化SDK信息--高德地图
+#define APPKEY_GAODE @"38fad3c0c1860248d2d00f8650463a83"
+
+
+//-- 初始化环信相关资料
+//#define APPKEY_EaseMob @"469087843#zhujunwueeasemob"
+//#define apnsCerName @"testhuanxin"
+
+#define APPKEY_ShareSDK @"19a2b7c4bbd56"
+
+#define APPKEY_JPUSH @"8664871a948aaa7abbe6ffd4"
+
+#pragma mark 本地数据保存路径
+
+/**
+ *  用户模型保存路径
+ */
+#define ACCOUNTPATH [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"account.data"]
+
+/**
+ *  用户常用地址一
+ */
+#define CommonAddressOne [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"commonAddress_one.data"]
+
+/**
+ *  用户常用地址二
+ */
+#define CommonAddressTwo [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"commonAddress_two.data"]
+  
+
+//-- 通讯录保存路径
+#define DATABASEPATH [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"chexiaomi.sqlite"]
+
+//-- 头像文件保存路径
+#define XIAOMI_HEADERLOCALPATH [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"avatar.png"]
+
+//->>默认头像存放路径
+//#define XIAOMI_HEADERLOCALPATH_DEFAULT [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"defaultAvatar.png"]
+
+//->>头像的原始文件
+#define XIAOMI_HEADERLOCALPATH_ORIGINAL [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"original.png"]
+
+
+//->>用户选择的所有车辆信息存放路径
+#define XIAOMI_USERALLCARINFO [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"allCarsInfo.data"]
+
+//->>用户当前选择车辆信息的存放路径
+#define XIAOMI_USERCURRENTCARINFO [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"currentCarInfo.data"]
+
+//->>用户所有车辆车牌号码列表
+#define XIAOMI_carNumberList [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"carNumbers.plist"]
+
+//!< 搜索历史保存路径
+#define XMSearchHistoryPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"searchHistory.plist"]
+
+
+//->>已完成的离线地图数据名称保存路径
+#define XIAOMI_offlineMapfinishedPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"offlineMapData.plist"]
+
+
+#pragma mark --- 通知名称
+//->>
+//->>裁剪好头像写入沙盒完成后发送的通知
+#define kXIAOMIHEADERIMAGEWRITEFINISHNOTIFICATION @"kXIAOMIHEADERIMAGEWRITEFINISHNOTIFICATION"
+
+//->>选择完车辆发送的通知
+#define  kCHEXIAOMISETTINGDIDCHOOSECARNOTIFICATION @"kCHEXIAOMISETTINGDIDCHOOSECARNOTIFICATION"
+
+//->>二维码扫描完成发送的通知
+#define kCHEXIAOMISETTINGQRCODIDIDFINISHSCANNOTIFICATION @"kCHEXIAOMISETTINGQRCODEDIDFINISHSCANNOTIFICATION"
+
+
+//->>选择填写车牌后返回时发送的通知
+#define kCHEXIAOMISETTINGDIDWRITECARNUMBERNOTIFICATION  @"kCHEXIAOMISETTINGDIDWRITECARNUMBERNOTIFICATION"
+
+
+//!< 用户设置默认车辆成功之后发送的通知
+#define kCheXiaoMiUserSetDefaultCarSuccessNotification @"kCheXiaoMiUserSetDefaultCarSuccessNotification"
+
+
+//!< 用户从网络获取默认车辆或者全部车辆信息成功后发送的通知 ，通知另外两个界面进行更新数据
+#define kCheXiaoMiUserDidUpdateCarInfoNotification @"kCheXiaoMiUserDidUpdateCarInfoNotification"
+
+#define kCheXiaoMiDidReceiveRemoteNotification @"kCheXiaoMiDidReceiveRemoteNotification"
+
+
+//!< 网络发生变化
+#define XMNetWorkDidChangedNotification @"XMNetWorkDidChangedNotification"
+
+//-- start navi btn click  notification in the petrol station module
+#define kXMNaviToPetrolStationNotification @"kXMNaviToPetrolStationNotification"
+
+//-- start navi btn click  notification in the parking station module
+#define kXMNaviToParkingStationNotification @"kXMNaviToParkingStationNotification"
+
+//!< 用户点击查看离线地图数据的通知
+#define XMPreviewOfflineMapNotification @"XMPreviewOfflineMapNotification"
+
+
+//!< DVR  点击取消远程下载文件发送的通知
+#define kXMDVRImageViewControllerCancelBtnClickNotification @"kXMDVRImageViewControllerCancelBtnClickNotification"
+
+//!< 点击cell的导航按钮
+#define kXMCellNaviBtnDidClickNotification @"kXMCellNaviBtnDidClickNotification"
+
+//-- 判断定位服务是否开启
+#define locationEnable [CLLocationManager locationServicesEnabled]
+
+//-- 点击企业账号下的车辆列表的cell发送的通知
+#define kXMShowCarVCCellClickNotification @"kXMShowCarCellClickNotification"
+
+//-- 自定义log
+#ifdef DEBUG
+#define XMLOG(...)  NSLog(__VA_ARGS__)
+#else
+#define XMLOG(...)
+#endif
+
+
+//!< 友盟页面的统计
+#define MobClickBegain(msg) [MobClick beginLogPageView:msg]
+#define MobClickEnd(msg) [MobClick endLogPageView:msg];
+
+//-- 颜色
+
+//-- 自定义
+#define XMColor(r,g,b) [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1]
+//-- 十六进制
+#define XMColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+//-- 随机色
+#define XMRandomColor [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1.0]
+
+//!< 主题颜色
+#define XMGrayColor XMColorFromRGB(0x7F7F7F) //灰色
+#define XMGreenColor XMColorFromRGB(0x5DD672)//绿色
+#define XMRedColor XMColorFromRGB(0xFF3366)//红色
+#define XMBlueColor XMColorFromRGB(0x187AE5)//蓝色
+#define XMWhiteColor XMColorFromRGB(0xF8F8F8)//白色
+#define XMPurpleColor XMColorFromRGB(0x7470E9)//紫色
+#define XMTopColor  XMColorFromRGB(0x2e2e34)//状态栏底色
+#define XMClearColor [UIColor clearColor]//透明色
+
+
+//!< 离线地图下载key
+#define DownloadStageIsRunningKey2   @"DownloadStageIsRunningKey"
+#define DownloadStageStatusKey2      @"DownloadStageStatusKey"
+#define DownloadStageInfoKey2        @"DownloadStageInfoKey"
+
+
+//-- 定义常用的变量
+#define mainSize [UIScreen mainScreen].bounds.size
+
+//屏幕适配
+#define FITWIDTH(a)  ((a) * mainSize.width) / 375
+#define FITHEIGHT(a)  ((a) * mainSize.height) / 667
+
+
+//-- 自定义弹框样式
+#import "UIViewController+alert.h"
+
+//!< 网络请求相关
+//#define  mainAddress @"http://api.cesiumai.cn/v2.ashx?key=43f32f4722e0991ae17403a549e1f244&method="    原地址
+//http://open.tescar.cn/v2.ashx?key=b2b1e3ab1552b3036e82bdef8cf76047&method=tboxscorebytboxid&v=3&tboxid=16
+
+//!< 测试环境地址
+#define  mainAddress @"http://apitest.cesiumai.cn/v2.ashx?key=43f32f4722e0991ae17403a549e1f244&method="
+
+
+//*************************DVR******************************//
+
+#define iOS [[[UIDevice currentDevice] systemVersion] floatValue]
+
+
+#define DVRHost @"http://192.168.63.9/cgi-bin/Control.cgi?"
+
+
+//!< 网络请求相关
+#define  mainAddress_DVR @"http://open.tescar.cn/v2.ashx?key=b2b1e3ab1552b3036e82bdef8cf76047&method="
+
+
+//判断是否是企业用户
+#define isCompany ([[NSUserDefaults standardUserDefaults] integerForKey:@"typeId"] > 1)
+//判断是否是企业用户
+//#define isCompany  [XMUser user].typeId
+
+
+#endif
+
+
+
+
+#endif /* PrefixHeader_pch */

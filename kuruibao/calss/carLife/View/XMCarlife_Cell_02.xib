@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_02" rowHeight="252" id="KGk-i7-Jjw" customClass="XMCarlife_Cell_02">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017-03-30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQu-v3-YvW">
+                        <rect key="frame" x="18" y="191" width="100" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="4d0-kU-s49"/>
+                            <constraint firstAttribute="height" constant="10" id="Ulf-My-HEh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.69411764705882351" green="0.69411764705882351" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell_02" translatesAutoresizingMaskIntoConstraints="NO" id="XeE-Fl-isZ">
+                        <rect key="frame" x="20" y="50" width="330" height="129"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="129" id="5H3-v7-iUn"/>
+                            <constraint firstAttribute="width" constant="330" id="te3-ir-96v"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车小米联网渐行渐近,未来十年有望迈入发展黄金期" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81e-KD-Osn">
+                        <rect key="frame" x="20" y="14" width="180" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="180" id="D5g-dX-2EP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carLife_line" translatesAutoresizingMaskIntoConstraints="NO" id="wUh-ml-XGs">
+                        <rect key="frame" x="0.0" y="218" width="375" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Ejm-1o-iaU"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XeE-Fl-isZ" firstAttribute="top" secondItem="81e-KD-Osn" secondAttribute="bottom" constant="14" id="0pP-CA-A4j"/>
+                    <constraint firstAttribute="trailing" secondItem="wUh-ml-XGs" secondAttribute="trailing" id="Gjm-ZH-2gf"/>
+                    <constraint firstItem="XeE-Fl-isZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="JRB-Qq-Mf1"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="tQu-v3-YvW" secondAttribute="bottom" constant="11" id="W1G-1e-ITh"/>
+                    <constraint firstItem="tQu-v3-YvW" firstAttribute="top" secondItem="XeE-Fl-isZ" secondAttribute="bottom" constant="12" id="f7X-s3-rmA"/>
+                    <constraint firstItem="tQu-v3-YvW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="ijB-OF-DDg"/>
+                    <constraint firstItem="81e-KD-Osn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="n1D-yd-cLv"/>
+                    <constraint firstAttribute="bottom" secondItem="wUh-ml-XGs" secondAttribute="bottom" id="pZd-uh-FPB"/>
+                    <constraint firstItem="wUh-ml-XGs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vHm-4G-hwT"/>
+                    <constraint firstItem="81e-KD-Osn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="w4B-T6-ugX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-34" y="-89"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="carLife_line" width="363" height="1"/>
+        <image name="cell_02" width="611" height="338"/>
+    </resources>
+</document>

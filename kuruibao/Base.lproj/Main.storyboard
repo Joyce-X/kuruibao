@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Monitor View Controller-->
+        <scene sceneID="ihd-3i-agS">
+            <objects>
+                <viewController id="Dif-Ln-62C" customClass="XMMonitorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KU6-m9-WIk"/>
+                        <viewControllerLayoutGuide type="bottom" id="DpF-Gj-WVf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="prB-dD-HSX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RAj-dt-ILP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yh6-ca-euN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15454" y="-5103"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="HiK-h8-DP9">
+            <objects>
+                <tabBarController storyboardIdentifier="XMMainTabBarController" id="Rxb-wB-0W1" customClass="XMMainTabBarController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Wcv-K9-vB0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="FUd-6L-LoT" kind="relationship" relationship="viewControllers" id="X5h-DM-iin"/>
+                        <segue destination="No4-Qw-I5l" kind="relationship" relationship="viewControllers" id="wSZ-wP-CGa"/>
+                        <segue destination="csi-bl-Wgg" kind="relationship" relationship="viewControllers" id="ueU-HF-97p"/>
+                        <segue destination="HPj-4Z-x6N" kind="relationship" relationship="viewControllers" id="ecj-Kz-l5H"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xP8-OR-46q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18445" y="-2784"/>
+        </scene>
+        <!--Route View Controller-->
+        <scene sceneID="VyG-qQ-o5p">
+            <objects>
+                <viewController id="qTH-eY-jvH" customClass="XMRouteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2zd-55-ilb"/>
+                        <viewControllerLayoutGuide type="bottom" id="ohL-YF-VDQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="prd-aV-kwc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lCq-18-VwN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRp-NK-GHC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15489" y="-3163"/>
+        </scene>
+        <!--Car Life Controller-->
+        <scene sceneID="JUe-GE-Wvm">
+            <objects>
+                <viewController id="xL3-L3-tca" customClass="XMCarLifeController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lrH-Dq-01R"/>
+                        <viewControllerLayoutGuide type="bottom" id="isC-qP-HyK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cf8-3A-PHp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IFN-Oo-B2L"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KTC-oh-47T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17052.5" y="-2327.5"/>
+        </scene>
+        <!--地图-->
+        <scene sceneID="sN4-Lx-kvU">
+            <objects>
+                <viewController storyboardIdentifier="XMMapViewController" id="IMc-OF-TRx" userLabel="地图" customClass="XMBaiduMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pop-Oz-wHz"/>
+                        <viewControllerLayoutGuide type="bottom" id="edW-qK-tTf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hi5-aE-MER">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXv-1A-C2n" customClass="BMKMapView">
+                                <rect key="frame" x="0.0" y="-20" width="375" height="687"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVH-aS-cgZ">
+                                <rect key="frame" x="327" y="535" width="38" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="YPQ-0O-hRK"/>
+                                    <constraint firstAttribute="width" constant="38" id="eLG-1T-0AN"/>
+                                </constraints>
+                                <state key="normal" image="baiduMap_enlarge"/>
+                                <connections>
+                                    <action selector="enlargeClick:" destination="IMc-OF-TRx" eventType="touchUpInside" id="ecM-RN-pAs"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baiduMap_seperateLine" translatesAutoresizingMaskIntoConstraints="NO" id="xAw-6B-8Nr">
+                                <rect key="frame" x="327" y="577" width="38" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="3Bs-Jq-ljk"/>
+                                    <constraint firstAttribute="width" constant="38" id="4zc-dI-DS3"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igc-GO-n2J">
+                                <rect key="frame" x="327" y="38" width="38" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="Vdn-aT-SUg"/>
+                                    <constraint firstAttribute="height" constant="39" id="wub-Fr-g3c"/>
+                                </constraints>
+                                <state key="normal" image="map_locationCurrentCar"/>
+                                <state key="selected" image="map_locationAllCar"/>
+                                <connections>
+                                    <action selector="stateBtnClick:" destination="IMc-OF-TRx" eventType="touchUpInside" id="K8P-Yr-npc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYE-pk-Uv1">
+                                <rect key="frame" x="327" y="578" width="38" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="Enx-HH-izn"/>
+                                    <constraint firstAttribute="height" constant="42" id="EuV-dR-90N"/>
+                                </constraints>
+                                <state key="normal" image="baiduMap_reduce"/>
+                                <connections>
+                                    <action selector="reduceClick:" destination="IMc-OF-TRx" eventType="touchUpInside" id="hFH-wB-PJW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mK-tO-HkB">
+                                <rect key="frame" x="10" y="537" width="38" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="RA4-JE-77c"/>
+                                    <constraint firstAttribute="width" constant="38" id="kI3-ol-mBM"/>
+                                </constraints>
+                                <state key="normal" image="baiduMap_location_car"/>
+                                <connections>
+                                    <action selector="carLocationClick:" destination="IMc-OF-TRx" eventType="touchUpInside" id="mRP-SW-HfQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vK-Lx-lgB">
+                                <rect key="frame" x="10" y="581" width="38" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="1cP-JH-Zi8"/>
+                                    <constraint firstAttribute="height" constant="39" id="4IF-YN-2jd"/>
+                                </constraints>
+                                <state key="normal" image="baiduMap_location_user"/>
+                                <connections>
+                                    <action selector="userLocationClick:" destination="IMc-OF-TRx" eventType="touchUpInside" id="LQw-DT-Eqs"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFh-YI-u4o">
+                                <rect key="frame" x="328" y="38" width="38" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="Lgb-Pg-X84"/>
+                                    <constraint firstAttribute="height" constant="39" id="yv7-TL-4mk"/>
+                                </constraints>
+                                <state key="normal" image="baiduMap_setting"/>
+                                <connections>
+                                    <action selector="settingClick:" destination="IMc-OF-TRx" eventType="touchUpInside" id="h6C-fy-P2P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xAw-6B-8Nr" firstAttribute="top" secondItem="SVH-aS-cgZ" secondAttribute="bottom" id="4c0-np-BT7"/>
+                            <constraint firstItem="edW-qK-tTf" firstAttribute="top" secondItem="WYE-pk-Uv1" secondAttribute="bottom" constant="47" id="5a9-2D-HYy"/>
+                            <constraint firstAttribute="trailing" secondItem="SVH-aS-cgZ" secondAttribute="trailing" constant="10" id="Ada-Za-s9g"/>
+                            <constraint firstAttribute="trailing" secondItem="EXv-1A-C2n" secondAttribute="trailing" id="FIo-YI-f8L"/>
+                            <constraint firstAttribute="trailing" secondItem="dFh-YI-u4o" secondAttribute="trailing" constant="9" id="G0m-lY-cxO"/>
+                            <constraint firstItem="9vK-Lx-lgB" firstAttribute="leading" secondItem="Hi5-aE-MER" secondAttribute="leading" constant="10" id="I9h-EK-ZMg"/>
+                            <constraint firstItem="edW-qK-tTf" firstAttribute="top" secondItem="EXv-1A-C2n" secondAttribute="bottom" id="OXC-oW-lF4"/>
+                            <constraint firstItem="EXv-1A-C2n" firstAttribute="top" secondItem="Pop-Oz-wHz" secondAttribute="bottom" constant="-20" id="Xtk-It-Frh"/>
+                            <constraint firstAttribute="trailing" secondItem="igc-GO-n2J" secondAttribute="trailing" constant="10" id="YY2-mD-Bd7"/>
+                            <constraint firstAttribute="trailing" secondItem="xAw-6B-8Nr" secondAttribute="trailing" constant="10" id="ahl-VU-WiE"/>
+                            <constraint firstItem="EXv-1A-C2n" firstAttribute="leading" secondItem="Hi5-aE-MER" secondAttribute="leading" id="dJY-7r-fb0"/>
+                            <constraint firstItem="8mK-tO-HkB" firstAttribute="leading" secondItem="Hi5-aE-MER" secondAttribute="leading" constant="10" id="eE1-d6-VQ3"/>
+                            <constraint firstItem="9vK-Lx-lgB" firstAttribute="top" secondItem="8mK-tO-HkB" secondAttribute="bottom" constant="5" id="ff2-T0-Xyf"/>
+                            <constraint firstItem="dFh-YI-u4o" firstAttribute="top" secondItem="Pop-Oz-wHz" secondAttribute="bottom" constant="38" id="hjM-XR-xNs"/>
+                            <constraint firstAttribute="trailing" secondItem="WYE-pk-Uv1" secondAttribute="trailing" constant="10" id="hzg-Sd-27u"/>
+                            <constraint firstItem="edW-qK-tTf" firstAttribute="top" secondItem="9vK-Lx-lgB" secondAttribute="bottom" constant="47" id="pd0-Pp-vii"/>
+                            <constraint firstItem="igc-GO-n2J" firstAttribute="top" secondItem="Pop-Oz-wHz" secondAttribute="bottom" constant="38" id="v0Y-Gx-XKp"/>
+                            <constraint firstItem="WYE-pk-Uv1" firstAttribute="top" secondItem="xAw-6B-8Nr" secondAttribute="bottom" id="xo9-YF-HOT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="arQ-cq-xSP"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="EXv-1A-C2n" id="AYw-WQ-Gwb"/>
+                        <outlet property="stateBtn" destination="igc-GO-n2J" id="vtu-mv-glI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e9n-bh-BOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15959.5" y="-4008.5"/>
+        </scene>
+        <!--Main Navi Controller-->
+        <scene sceneID="vOy-dd-LzC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FUd-6L-LoT" customClass="XMMainNaviController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="WQ6-4V-rqU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="obc-MU-pRe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Dif-Ln-62C" kind="relationship" relationship="rootViewController" id="bv5-rL-Ts6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hwv-H7-X80" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16518" y="-4926"/>
+        </scene>
+        <!--Navi View Controller-->
+        <scene sceneID="Asc-da-4bX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="No4-Qw-I5l" customClass="XMDVRNaviViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="pZc-AD-6AL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bdC-X6-9R2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IMc-OF-TRx" kind="relationship" relationship="rootViewController" id="U0L-HJ-7ZB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oau-YV-1Iy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16519" y="-4008"/>
+        </scene>
+        <!--Main Navi Controller-->
+        <scene sceneID="TEf-ja-V0y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="csi-bl-Wgg" customClass="XMMainNaviController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="azC-U5-SAe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dRM-1M-Fzz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qTH-eY-jvH" kind="relationship" relationship="rootViewController" id="OVP-Yw-88I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="giW-jL-QL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16450" y="-3134"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="3TX-m5-tEH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HPj-4Z-x6N" customClass="XMCarLifeNaviViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="hsh-bc-DF2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C7g-nC-kSe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xL3-L3-tca" kind="relationship" relationship="rootViewController" id="bGB-JG-Nzo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BlO-gs-Q9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17694" y="-2336"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="baiduMap_enlarge" width="38" height="42"/>
+        <image name="baiduMap_location_car" width="38" height="39"/>
+        <image name="baiduMap_location_user" width="38" height="39"/>
+        <image name="baiduMap_reduce" width="38" height="44"/>
+        <image name="baiduMap_seperateLine" width="38" height="1"/>
+        <image name="baiduMap_setting" width="38" height="39"/>
+        <image name="map_locationAllCar" width="77" height="77"/>
+        <image name="map_locationCurrentCar" width="77" height="77"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
